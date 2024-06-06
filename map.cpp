@@ -17,3 +17,11 @@ void Map::Print(bool draw) const {
         std::cout << "-------------------" << std::endl;
     }
 }
+
+int Map::GetWidth() const {
+    return width_;
+}
+
+int Map::GetHeight() const {
+    return height_;
+}
