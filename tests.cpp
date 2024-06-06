@@ -5,8 +5,8 @@
 TEST(MapTest, InitializationTest) {
     Map map(0, 0, 60, 90, 2, 2);
 
-    ASSERT_EQ(map.GetWidth(), 60);
-    ASSERT_EQ(map.GetHeight(), 90);
+    ASSERT_EQ(map.Width(), 60);
+    ASSERT_EQ(map.Height(), 90);
 }
 
 // Test case 2: Test the Print function when draw parameter is false
