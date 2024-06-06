@@ -11,7 +11,6 @@ TEST(MapTileProxyTest, InitializationTest) {
     ASSERT_EQ(mapTile.Height(), 40);
 }
 
-// Test case 2: Test the Draw function of MapTileProxy
 TEST(MapTileProxyTest, DrawTest) {
     MapTileProxy mapTile(10, 20, 30, 40);
     testing::internal::CaptureStdout(); // Redirect cout
@@ -19,8 +18,7 @@ TEST(MapTileProxyTest, DrawTest) {
     mapTile.Draw();
 
     std::string output = testing::internal::GetCapturedStdout(); // Get cout
-    ASSERT_FALSE(output.empty());
-    // Add more assertions to check the correctness of the output
+    ASSERT_EQ(output, "Drawing tile at (10, 20) with size 30x40\n");
 }
 
 // Test case 3: Test the behavior of MapTileProxy with negative values
