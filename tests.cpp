@@ -5,10 +5,13 @@
 TEST(MapTest, InitializationTest) {
     Map map(0, 0, 60, 90, 2, 2);
 
-    ASSERT_EQ(map.Width(), 60);
-    ASSERT_EQ(map.Height(), 90);
-    ASSERT_EQ(map.NumTilesX(), 2);
-    ASSERT_EQ(map.NumTilesY(), 2);
+    // Check the width and height of the Map object
+    ASSERT_EQ(map.GetTileWidth(), 60);
+    ASSERT_EQ(map.GetTileHeight(), 90);
+
+    // Check the number of tiles in X and Y directions
+    ASSERT_EQ(map.GetNumTilesX(), 2);
+    ASSERT_EQ(map.GetNumTilesY(), 2);
 }
 
 // Test case 2: Test the Print function when draw parameter is false
